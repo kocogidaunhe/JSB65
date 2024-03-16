@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Nhap diem so</p>
+    <input type="number" id="diem">
+    <button onclick="checkScore()">Kiem tra diem</button>
+    <script>
+        function checkScore() {
+            var diem = Document.getElementById("diemInput").value;
+            var rank;
+            if (diem < 4) {
+            rank = "Yeu";       
+            } else if (diem < 6) {
+                rank = "Trung binh";
+            } else if (diem < 8) {
+                rank = "Kha";
+            } else if (diem < 9.5) {
+                rank = "Gioi";
+            } else if (diem <= 10) {
+                rank = "Xuat sac";
+            } else  {
+                rank = "Diem khong hop le";
+            }
+            document.getElementById("rankOutput").innerHTML = "Xep hang" + rank;
+
+
+        }
+            
+        
+    </script>
+</body>
+</html>
